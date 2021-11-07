@@ -20,7 +20,7 @@ const ItemCount = ({ stock }) => {
 
     return (
         <>
-            <div className="counterCard">
+            <div>
                 <div>
                     <span>
                         <button className="mx-2" onClick={onDecrease} > - </button>
