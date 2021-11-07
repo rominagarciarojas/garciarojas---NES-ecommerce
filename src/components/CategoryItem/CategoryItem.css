@@ -1,0 +1,12 @@
+.imgCategory{
+  width: 100px;
+  height: auto;
+  text-align: center;
+}
+
+.botonesdetalle{
+  background-color: #F4623A;
+  color: black;
+  border-color: #F4623A;
+  font-family: 'Orbitron', sans-serif;
+}

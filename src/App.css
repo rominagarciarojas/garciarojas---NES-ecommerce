@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #e3e6eb;
+  min-height: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: #212529;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cardView{
+  width: 18rem;
+  margin: 20px;
+}
+.cardImage{
+  width: 8rem;
+  margin: auto;
+  margin-top: 20px;
+}
+.titleCard{
+  color: #F4623A;
+}

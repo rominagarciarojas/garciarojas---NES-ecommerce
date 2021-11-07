@@ -1,0 +1,10 @@
+ .ItemListContainer{
+  color: #F4623A;
+  font-weight: bold;
+  text-align: center;
+  }
+
+
+  .ItemListContainerCard{
+    background-color: rgba(245, 245, 245, 0.884);
+  }

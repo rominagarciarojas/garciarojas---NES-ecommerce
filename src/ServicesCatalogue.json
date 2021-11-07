@@ -1,0 +1,56 @@
+
+[{
+  "id":"1",
+  "title":"Iluminación diurna",
+  "image":"../img/diurna.svg",
+  "category":"Iluminacion",
+  "description":"La ilumnación se realiza de xxxxxx",
+  "price":"5000",
+  "stock":"3"
+  },
+  {
+  "id":"2",
+  "title":"Iluminación nocturna",
+  "image":"../img/nocturna.svg",
+  "category":"Iluminacion",
+  "description":"La ilumnación se realiza de xxxxxx",
+  "price":"10000",
+  "stock":"3"
+  },
+  {
+  "id":"3",
+  "title":"Iluminación de emergencia",
+  "image":"../img/emergencia.svg",
+  "category":"Iluminacion",
+  "description":"La ilumnación se realiza de xxxxxx",
+  "price":"8000",
+  "stock":"3"
+  },
+  {
+  "id":"4",
+  "title":"Control de extintores",
+  "image":"../img/extintor.svg",
+  "category":"Extintores",
+  "description":"Asesoramiento integral sobre xxxxx",
+  "price":"8000",
+  "stock":"3"
+  },
+  {
+    "id":"5",
+    "title":"Control de caminos de circulación",
+    "image":"../img/camino.svg",
+    "category":"EPP",
+    "description":"Asesoramiento integral sobre xxxxx",
+    "price":"12000",
+    "stock":"3"
+    },
+  {
+  "id":"6",
+  "title":"Elementos de Protección Personal",
+  "image":"../img/mascara.svg",
+  "category":"EPP",
+  "description":"Asesoramiento integral sobre xxxxx",
+  "price":"7500",
+  "stock":"3"
+  }
+  ]

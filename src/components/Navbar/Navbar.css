@@ -1,0 +1,27 @@
+.navbar{
+  background-color: #F4623A;
+}
+
+ul li{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color:whitesmoke;
+}
+
+.logo{
+  color: whitesmoke;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.nav-link{
+  color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  text-decoration: none;
+}
+
+.nav-item{
+  list-style: none;
+}
