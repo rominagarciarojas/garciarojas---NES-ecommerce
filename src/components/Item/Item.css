@@ -13,4 +13,8 @@
 .contenerdorCard{
     background-color: rgba(245, 245, 245, 0.884);
 }
+.textoStock{
+    color:black;
+    font-weight:lighter;
+}
 

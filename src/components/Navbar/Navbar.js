@@ -26,7 +26,9 @@ export const Navbar = () => {
                     ))}
                 </ul>
                 <div>
-                    <CardWidget />        
+                    <Link to="/Cart">
+                    <CardWidget />   
+                    </Link>     
                 </div> 
             </nav>
         </>
