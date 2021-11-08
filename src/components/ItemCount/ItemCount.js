@@ -1,10 +1,11 @@
-
 import './ItemCount.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom' 
 
-const ItemCount = ({ stock }) => {
+export function ItemCount ({ stock, initial, onAdd }) {                
 
-    const [count, setCount] = useState(1)
+    const [count, setCount] = useState(initial)
+    const [newBoton, setNewBoton] = useState (false)
 
     const onDecrease = () => {
         if (count >= 1) {
@@ -16,6 +17,12 @@ const ItemCount = ({ stock }) => {
         if (count < stock) {
             setCount(count + 1)
         }
+    }
+
+    const handleOnAdd = () => {
+        onAdd (count)
+        setCount (initial)
+        setNewBoton (true)
     }
 
     return (
@@ -30,6 +37,17 @@ const ItemCount = ({ stock }) => {
                         <button className="mx-2" onClick={onIncrease}>+</button>
                     </span>
                 </div>
+
+                { newBoton ? 
+                    <Link to="/Cart">
+                        <button className="botonesdetalle m-3">Terminar Compra</button>
+                    </Link>
+                    : 
+                    <button className="botonesdetalle m-3" onClick={handleOnAdd}>Agregar al carrito</button>
+                }
+
+
+
             </div>
 
         </>
@@ -37,4 +55,3 @@ const ItemCount = ({ stock }) => {
 }
 
 export default ItemCount;
-
