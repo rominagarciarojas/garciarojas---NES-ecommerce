@@ -40,16 +40,13 @@ export function ItemCount ({ stock, initial, onAdd }) {
 
                 { newBoton ? 
                     <Link to="/Cart">
-                        <button className="botonesdetalle m-3">Terminar Compra</button>
+                        <button className="botonesdetalle m-3">Terminar compra</button>
                     </Link>
                     : 
                     <button className="botonesdetalle m-3" onClick={handleOnAdd}>Agregar al carrito</button>
                 }
 
-
-
             </div>
-
         </>
     );
 }
