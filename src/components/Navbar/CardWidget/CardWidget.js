@@ -1,4 +1,4 @@
-import ItemCount from '../../ItemCount/ItemCount';
+
 import cart4 from './cart4.svg';
 
 const CardWidget = () => {
