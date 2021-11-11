@@ -9,7 +9,7 @@ const CardWidget = () => {
     const {cantidadCarrito} = useContext(CartContext);
 
     return ( 
-        <Link to={'/carrito'}>
+        <Link to={'/cart'}>
 
         {cantidadCarrito() > 0 ? 
             (
