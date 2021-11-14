@@ -9,9 +9,26 @@
     width: 100px;
     text-align: center;
     margin: auto;
+    justify-content: center;
 }
 .contenerdorCard{
     background-color: rgba(245, 245, 245, 0.884);
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+    margin-top: 20px;
+    border: solid 1px gray;
+    grid-gap: 20px;
+    
+}
+
+.card-body{
+    display: grid;
+
 }
 .textoStock{
     color:black;

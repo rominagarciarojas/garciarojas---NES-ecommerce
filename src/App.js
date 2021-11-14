@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Cart from './components/Cart/Cart';
-import FinalCart from './components/FinalCart/FinalCart';
+import CartView from './components/CartView/CartView';
 import ErrorCard from './components/ErrorCard/ErrorCard';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Category from './components/Category/Category';
@@ -33,8 +33,8 @@ function App() {
         <Route exact path="/cart">
             <Cart />
         </Route>
-        <Route exact path="/FinalCart">
-            <FinalCart />
+        <Route exact path="/CartView">
+            <CartView />
         </Route>
         <Route path="*">
             <ErrorCard />

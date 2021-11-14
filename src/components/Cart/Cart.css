@@ -31,3 +31,37 @@
   .price{
     font-weight: bold;
   }
+
+  .cartContainer{
+    display:grid;
+   width: 100%;
+  margin:auto;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   
+  
+  }
+
+  .cartContainerUl{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: auto;
+    padding: auto;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    grid-gap: 20px;
+    
+  }
+  .cartContainerLi{
+    border: 1px solid gray;
+    padding: auto;
+    justify-content: center;
+    text-align: center;
+    
+  }
+
+  .parrafo{
+    color: black;
+  }

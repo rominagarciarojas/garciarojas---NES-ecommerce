@@ -1,56 +1,56 @@
 
 [{
   "id":"1",
-  "title":"Iluminación diurna",
+  "title":"Medición de Iluminación diurna",
   "image":"../img/diurna.svg",
   "category":"Iluminacion",
-  "description":"La ilumnación se realiza de xxxxxx",
+  "description":"Es un estudio realizado con un equipo de medición en los locales de trabajo para evaluar si la intensidad lumínica es acorde a la actividad visual desarrollada. En función a los horarios de trabajo este estudio debe ser realizado en horario diurno o nocturno. La frecuencia de realización del mismo es anual según lo establecido por las RES SRT 295/03 y RES SRT 84/12.",
   "price":"5000",
-  "stock":"3"
+  "stock":"1"
   },
   {
   "id":"2",
-  "title":"Iluminación nocturna",
+  "title":"Medición de Iluminación nocturna",
   "image":"../img/nocturna.svg",
   "category":"Iluminacion",
-  "description":"La ilumnación se realiza de xxxxxx",
+  "description":"Es un estudio realizado con un equipo de medición en los locales de trabajo para evaluar si la intensidad lumínica es acorde a la actividad visual desarrollada. En función a los horarios de trabajo este estudio debe ser realizado en horario diurno o nocturno. La frecuencia de realización del mismo es anual según lo establecido por las RES SRT 295/03 y RES SRT 84/12.",
   "price":"10000",
-  "stock":"3"
+  "stock":"1"
   },
   {
   "id":"3",
-  "title":"Iluminación de emergencia",
+  "title":"Medición de Iluminación de emergencia",
   "image":"../img/emergencia.svg",
   "category":"Iluminacion",
-  "description":"La ilumnación se realiza de xxxxxx",
+  "description":"El estudio se realiza en el sistema de iluminación de emergencia para verificar si el nivel de iluminación alcanza el mínimo requerido dado que en caso de un corte del suministro eléctrico facilitará la evacuación iluminando las vías de escape. Esta medición se realiza según lo establecido por el Art. 76 del Dec. 351/7",
   "price":"8000",
-  "stock":"3"
+  "stock":"1"
   },
   {
   "id":"4",
   "title":"Control de extintores",
   "image":"../img/extintor.svg",
   "category":"Extintores",
-  "description":"Asesoramiento integral sobre xxxxx",
+  "description":"El extintor debe estar en buenas condiciones de funcionamiento, y su operación solo compete a usuarios bien informados. Los extintores deben estar disponible de conformidad con las normas. Debe ser del tipo apropiado para el incendio que está siendo combatido. Debe existir en cantidad y tamaño suficiente. Se lo debe mantener en condiciones de funcionamiento, inspeccionarlo con frecuencia, revisar si hubo manipulación indebida y recargarlo si es procedente. Se lo debe utilizar  en forma correcta.",
   "price":"8000",
-  "stock":"3"
+  "stock":"1"
   },
   {
     "id":"5",
     "title":"Control de caminos de circulación",
     "image":"../img/camino.svg",
     "category":"EPP",
-    "description":"Asesoramiento integral sobre xxxxx",
+    "description":"La señalización consiste básicamente en. Señalizar los diferentes riesgos existentes, precauciones, obligaciones a través de colores y señales. Contar con los caminos de circulación marcados de modo de favorecer el orden y limpieza de los locales de trabajo y Señalizar las salidas normales y de emergencias necesario para casos de posibles emergencias.",
     "price":"12000",
-    "stock":"3"
+    "stock":"1"
     },
   {
   "id":"6",
   "title":"Elementos de Protección Personal",
   "image":"../img/mascara.svg",
   "category":"EPP",
-  "description":"Asesoramiento integral sobre xxxxx",
+  "description":"Los elementos de protección personal deben proporcionar el máximo confort y gran eficiencia para evitar que el usuario sufra un accidente. Los equipos no deben restringir los movimientos del trabajador, sino contribuir a la seguridad del individuo durante su actividad.",
   "price":"7500",
-  "stock":"3"
+  "stock":"1"
   }
   ]

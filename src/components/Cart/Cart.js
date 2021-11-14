@@ -23,22 +23,22 @@ const Cart = () => {
                     </Link>
                 </div>
             ) : (
-                <div>
-                    <ul>
+                <div className="cartContainer">
+                    <ul className="cartContainerUl">
                         {carrito.map(serv  => 
-                            <li key={serv.id}> 
+                            <li className="cartContainerLi" key={serv.id}> 
                                 <img className="ImagenCard my-3" src={serv.image} alt={serv.title} />
                                 <h3>{serv.title}</h3>
-                                <h5>Precio total ${totalItem(serv)}</h5>
-                                <h5>Cantidad: {serv.count}</h5>
-                                <button onClick={() => eliminarItem(serv.id)}><img src={trash} alt="cesto" /></button>
+                                <h5 className="parrafo">Precio total ${totalItem(serv)}</h5>
+                                <h5 className="parrafo">Cantidad: {serv.count}</h5>
+                                <button className="m-2" onClick={() => eliminarItem(serv.id)}><img src={trash} alt="cesto" /></button>
                             </li>
                         )}
                     </ul>
                     <div>
                     <h2>Total ${total}</h2>
                     <button className="botonesdetalle mx-3" onClick={limpiarCarrito}>Vaciar carrito</button>
-                    <Link to={'/finalCart'}>
+                    <Link to={'/CartView'}>
                     <button className="botonesdetalle mx-3" onClick={terminarCompra}>Terminar compra</button>
                     </Link>
                     </div>
