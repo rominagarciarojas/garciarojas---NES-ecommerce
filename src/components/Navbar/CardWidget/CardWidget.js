@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../../context/CartContext';
-//import './CartWidget.css';
+import './CardWidget.css';
 import cart4 from './cart4.svg';
 
 const CardWidget = () => {
@@ -13,7 +13,7 @@ const CardWidget = () => {
 
         {cantidadCarrito() > 0 ? 
             (
-                <div>{cantidadCarrito()} </div> 
+                <div className="cantidadCarrito">{cantidadCarrito()} </div> 
             ) : (
                 <div ></div> 
             )}
