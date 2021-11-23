@@ -7,7 +7,7 @@ export const CartProvider = ({children}) => {
     const [carrito, setCarrito] = useState([]);
 
     const itemExistente = (item) => 
-        carrito.filter(servicio => servicio.id === item.id).length === 0;
+        carrito.filter(serv => serv.id === item.id).length === 0;
     
 
     const agregarItem = (item) => {
@@ -37,7 +37,8 @@ export const CartProvider = ({children}) => {
     const limpiarCarrito = () => {
         setCarrito([]);
     }
-
+    
+    
     return (
         <CartContext.Provider value={{carrito, agregarItem, totalCarrito, totalItem, cantidadCarrito, eliminarItem, limpiarCarrito}}>
             {children}
@@ -45,4 +46,6 @@ export const CartProvider = ({children}) => {
     )
 }
 
-export default CartContext
+
+export default CartProvider;
+

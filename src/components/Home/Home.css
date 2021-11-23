@@ -1,12 +1,15 @@
 .home{
-    padding: 8rem;
+    padding: 10rem;
     background-image: url(./seguridadTrabajo.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
- 
+h6{
+    color:black;
+    font-family: 'Orbitron', sans-serif;
+}
 
 
 h1 {
@@ -14,7 +17,12 @@ h1 {
     color:black;
 }
 
-h3{
+h5{
+    color:#F4623A;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.textoSosa{
     color:#F4623A;
     font-family: 'Orbitron', sans-serif;
 }

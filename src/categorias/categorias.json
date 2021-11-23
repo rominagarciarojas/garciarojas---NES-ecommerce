@@ -1,0 +1,16 @@
+{ 
+    "categorias" : [
+        {
+            "id": "Iluminacion",
+            "title": "Medición de iluminacion"
+        },
+        {
+            "id": "Extintores",
+            "title": "Control de extintores"
+        },
+        {   
+            "id": "EPP",
+            "title": "Elementos de Proteccion Personal"
+        } 
+    ]
+}

@@ -1,12 +1,66 @@
- .ItemListContainer{
-  color: #F4623A;
-  font-weight: bold;
-  text-align: center;
-  display: grid;
-  }
 
-
-  .ItemListContainerCard{
-    background-color: rgba(245, 245, 245, 0.884);
+  .items {
     display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    color: #F4623A;
+    text-align: center;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(245, 245, 245, 0.884);
+    padding-top: 25px;
   }
+  .items h3 {
+    color:#F4623A;
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  
+  .items ul {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    justify-content: center;
+    text-align: center;
+  }
+  .items ul a {
+    text-decoration-line: none;
+    transition: 5s;
+  
+  }
+  .items ul a:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+  .items ul li {
+    
+    list-style: none;
+    margin-bottom: 5vh;
+    padding: 3vh;
+    box-shadow: 6px 4px 23px -2px #B5B5B5;
+  }
+  .items ul li div {
+    border: 5px solid #F4623A;
+    padding: 10px;
+    
+  }
+  .items ul li div h6 {
+    font-size: 25px;
+    margin: 10px 0;
+    color: #89e0e0;
+    text-shadow: 2px 2px 5px #694b3b;
+  }
+  .items ul li div img {
+    width: 150px;
+    height: 170px;
+    
+  }
+  .items ul li div p {
+   font-family: 'Orbitron', sans-serif;
+    color: black;
+    padding: 5px;
+    margin: 10px 60px;
+    border-radius: 10px;
+  }
+
+  

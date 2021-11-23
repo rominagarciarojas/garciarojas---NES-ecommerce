@@ -1,27 +1,38 @@
-.navbar{
+
+.navbar {
   background-color: #F4623A;
+  display: flex;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+  height: 80px;
 }
 
-ul li{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  color:whitesmoke;
+.navbar ul {
+  display: flex;
+  list-style: none;
+  height: 15px;
+}
+.navbar ul li {
+  text-align:center;
+ justify-content:center;
+}
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+}
+.navbar ul li a:hover {
+  color: blue;
+}
+
+.menu{
+  width: 60%;
 }
 
 .logo{
-  color: whitesmoke;
-  font-family: 'Orbitron', sans-serif;
-}
-
-.nav-link{
-  color: whitesmoke;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  justify-content: center;
+  padding-left: 5px;
   margin: auto;
-  text-decoration: none;
-}
-
-.nav-item{
-  list-style: none;
+  padding-bottom: 0;
 }

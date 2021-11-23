@@ -1,41 +1,56 @@
 import './ItemListContainer.css';
-import ItemList from '../ItemList/ItemList';
 import { useEffect, useState } from "react";
 //import ServicesCatalogue from "../../ServicesCatalogue.json";
 import { getFirestore } from "../../firebase/index.js";
 import { useParams } from 'react-router-dom';
-//import {Item} from '../Item/Item';
+import {Item} from '../Item/Item';
 import { collection, query, where, getDocs } from "firebase/firestore";
+import BounceLoader from "react-spinners/BounceLoader";
+import { css } from "@emotion/react";
 
 export const ItemListContainer = () => {
-    const [servicios, setServicios] = useState([]);
-    const { categoryId } = useParams();
+    
+    const [itemsDisplay, setItemsDisplay] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const { catId } = useParams();
+    const spinnerStyle = css`
+        display: block;
+        margin: 20vh auto;
+        border-color: blue;
+    `;
   
     useEffect(() => {
       const db = getFirestore();
       let q = query(collection(db, "items"));
   
-      if (!categoryId) {
+      if (!catId) {
         getDocs(q).then((snapshot) => {
-          setServicios(snapshot.docs.map((doc) => doc.data()));
+          setItemsDisplay(snapshot.docs.map((doc) => doc.data()));
         });
       } else {
         const q = query(
           collection(db, "items"),
-          where("category", "==", categoryId)
+          where("category", "==", catId)
         );
         getDocs(q).then((snapshot) => {
-          setServicios(snapshot.docs.map((doc) => doc.data()));
+          setItemsDisplay(snapshot.docs.map((doc) => doc.data()));
+        }).finally(() => {
+            setLoading(false)
         });
       }
-    }, [categoryId]);
+    }, [catId]);
 
   return (
-    <div >
-        <ul>
-            <ItemList servicios={servicios} category={categoryId} key={servicios.id} /> 
+    
+        <div className="items">
+        <ul >
+        {!loading ? 
+                itemsDisplay.map((item) => <Item  item={item} category={catId} key={item.id} /> )
+                :
+                <BounceLoader css={spinnerStyle} size={80} color={"#F4623A"} loading={loading} speedMultiplier={1}  />
+                }
+        </ul>   
             
-        </ul>    
     </div>  
 )
 }

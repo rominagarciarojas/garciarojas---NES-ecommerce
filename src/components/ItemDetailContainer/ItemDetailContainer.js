@@ -1,54 +1,137 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from 'react-router';
-//import ServicesCatalogue from "../../ServicesCatalogue.json";
 import ItemDetail from "../ItemDetail/ItemDetail";
-//import { Link } from "react-router-dom";
 import { getFirestore } from "../../firebase/index";
-import { doc, getDoc } from "@firebase/firestore";
+import { doc, getDoc   } from "@firebase/firestore";
+import BounceLoader from "react-spinners/BounceLoader";
+import { css } from "@emotion/react";
 
+export const ItemDetailContainer = () => {
+  const {itemId} = useParams();
+  const [loading, setLoading] = useState(true);
+  const [displayItem, setDisplayItem] = useState();
+  const spinnerStyle = css`
+        display: block;
+        margin: 20vh auto;
+        border-color: blue;
+    `;
 
-export function ItemDetailContainer() {
-
-    const [itemDetail, setItemDetail] = useState();
-  
-    const { itemId } = useParams();
-  
-    useEffect(() => {
+  useEffect(() => {
       const db = getFirestore();
       const item = doc(db, "items", itemId);
       getDoc(item).then((snapshot) => {
-        if (snapshot.exists()) {
-          setItemDetail(snapshot.data());
-        }
-      });
-    }, [itemId]);
-  
-    return (
+          if (snapshot.exists()) {
+            setDisplayItem(snapshot.data());
+          } 
+          }).finally(() => {
+            setLoading(false)
+        })
+      }, [itemId]);
+
+  return (
       <div>
-        {itemDetail ? (
-          <ItemDetail item={itemDetail} />
-        ) : (
-          <div>
-            <h2>sdnflsdngldkngld</h2>
-          </div>
-        )}
+          {!loading ? 
+          displayItem && <ItemDetail {...displayItem} />
+          :
+          <BounceLoader css={spinnerStyle} size={80} color={"#F4623A"} loading={loading} speedMultiplier={1} />
+          }
       </div>
-    );
+  )
+}
+
+
+export default ItemDetailContainer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+export const ItemDetail = ({id, title, image, description, price, stock}) => {
+  const [count, setCount] = useState(0);
+  const [finalizar, setFinalizar] = useState(false);
+
+  const finalizarCompra = () => {if (count > 0) setFinalizar(!finalizar)};
+  
+  const {agregarItem} = useContext(CartContext);
+
+  const añadirItem = () => {
+
+      agregarItem({
+          id,
+          title,
+          price,
+          image,
+          count
+      })
+      finalizarCompra()
   }
 
+  return (
+      <div className='item-detail'>
+          <img src={image} alt={title} />
+          <div className='detail'>
+              <h1>{title}</h1>
+              <p>En stock: {stock}</p>
+              <p>Precio: <b>${price} </b></p>
+              <p><i>{description}</i></p>
+              {!finalizar ? (
+                  <div className='compra'>
+                  <ItemCount stock={stock} initial={0} count={count} setCount={setCount} />
+                  <button onClick={añadirItem}> Añadir al carrito</button>
+                  </div>
 
-  export default ItemDetailContainer;
+              ) : (
+                  <div className='compra'>
+                      <Link to='/cart' >
+                          <button onClick={finalizarCompra}> Ir al carrito</button>
+                      </Link>
+                      <button onClick={finalizarCompra}> Modificar</button>
+                  </div>
+              )
+              }
+          </div>
+      </div>
+  )
+}
+
+export default ItemDetail;
+
+
+*/
 
 
 
 
-///////////////// hasta aca ok ///////////////////////
+
+
+
+
+
+
+
 /*
+
+
 const ItemDetailContainer = () => {
 
-    const [item, setItem] = useState(null);
+    const [item, setItem] = useState([]);
    const { itemId } = useParams();
-
+   
+   /*
     const getItem = (data) =>
         new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -68,18 +151,38 @@ useEffect(() => {
 
            .catch((err) => console.log(err));
   }, [itemId]);
+*/
+/*
 
+useEffect(() => {
+  const db = getFirestore();
+  const item = doc(db, "items", itemId);
+  getDoc(item).then((snapshot) => {
+    if (snapshot.exists()) {
+      setItem(snapshot.data());
+    }
+  });
+}, [itemId]);
+*/
+
+
+
+
+
+
+
+
+/*
 return (
     <>
         <div className="container m-auto p-3 text-center">
         <h2>Detalle del Servicio</h2>
             <div className="card-fluid text-center">
             {item ? (
-                <ItemDetail
+                <ItemDetail {...setItem}
                     id={item.id}
                     title={item.title}
                     image={item.image}
-                    name={item.title}
                     description={item.description}
                     price={item.price}
                     stock={item.stock}
@@ -100,5 +203,6 @@ return (
 
 
 export default ItemDetailContainer;
+
 
 */

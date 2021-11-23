@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../../../context/CartContext';
-import './CardWidget.css';
+import { CartContext } from '../../context/CartContext';
+import './CartWidget.css';
 import cart4 from './cart4.svg';
 
-const CardWidget = () => {
+const CartWidget = () => {
 
     const {cantidadCarrito} = useContext(CartContext);
 
@@ -24,5 +24,7 @@ const CardWidget = () => {
      );
 }
  
-export default CardWidget;
+
+export default CartWidget;
+
 

@@ -1,67 +1,115 @@
+/*
+.contenedorCarrito {
+  text-align: center;
+  padding: 20px;
+}
+.contenedorCarrito h3 {
+  font-family: 'Orbitron', sans-serif;
+}
+.contenedorCarrito p {
+  font-family: 'Orbitron', sans-serif;
+  color: black;
+}
+.contenedorCarrito ul {
+  padding: 0 100px;
+  
+}
+.contenedorCarrito ul li {
+
+  display: flex;
+  padding: 20px 0;
+  place-content: center;
+  justify-content: space-around;
+  background-color: rgba(128, 128, 128, 0.2);
+  border-bottom: 1px solid white;
+  color: #F4623A;
+}
+.contenedorCarrito ul li img {
+  width: 50px;
+  height: 50px;
+}
+.contenedorCarrito ul li button {
+  background: none;
+  border: none;
+}
+.contenedorCarrito ul li button span {
+  color: black;
+  cursor: pointer;
+}
+.botonesdetalle {
+  background: #F4623A;
+  
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: whitesmoke;
+}
+*/
+
 .botonesContratar{
-    background-color: gray;
-    color: black;
-    border-color: gray;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: gray;
+  color: black;
+  border-color: gray;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .botonCarrito{
-    background-color: #F4623A;
-    border-color: #F4623A;
+  background-color: #F4623A;
+  border-color: #F4623A;
 }
 
 .ImagenCard{
-    width: 75px;
-    height: auto;
-    text-align: center;
-  }
-  
-  h3, h4, h5 {
-    font-family: 'Orbitron', sans-serif;
-    color: black;
-  
-  }
-  .botonesdetalle{
-    background-color: #F4623A;
-    color: black;
-    border-color: #F4623A;
-    font-family: 'Orbitron', sans-serif;
-  }
-  
-  .price{
-    font-weight: bold;
-  }
+  width: 75px;
+  height: auto;
+  text-align: center;
+}
 
-  .cartContainer{
-    display:grid;
-   width: 100%;
+h3, h4, h5 {
+  font-family: 'Orbitron', sans-serif;
+  color: black;
+
+}
+.botonesdetalle{
+  background-color: #F4623A;
+  color: black;
+  border-color: #F4623A;
+  font-family: 'Orbitron', sans-serif;
+}
+
+
+.cartContainer{
+  display:grid;
+  width: 100%;
   margin:auto;
-   text-align: center;
-   justify-content: center;
-   align-items: center;
-   
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.cartContainerUl{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: auto;
+  padding: auto;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  grid-gap: 20px;
+  list-style: none;
   
-  }
+}
+.cartContainerLi{
+  border: 1px solid gray;
+  padding: auto;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+ background-color: whitesmoke;
+}
 
-  .cartContainerUl{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: auto;
-    padding: auto;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
-    grid-gap: 20px;
-    
-  }
-  .cartContainerLi{
-    border: 1px solid gray;
-    padding: auto;
-    justify-content: center;
-    text-align: center;
-    
-  }
-
-  .parrafo{
-    color: black;
-  }
+h2 {
+  color: black;
+  font-size: xx-large;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 20px;
+}

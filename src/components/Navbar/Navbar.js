@@ -1,38 +1,28 @@
+import React from 'react';
 import './Navbar.css';
-import { Link } from "react-router-dom";
-import CardWidget from './CardWidget/CardWidget';
+import logo from '../Navbar/logo.png';
+import CartWidget from '../CartWidget/CartWidget';
+import {Link, NavLink} from 'react-router-dom';
+import {categorias} from '../../categorias/categorias.json'
 
-export const Navbar = () => {
+export const Navbar = () =>  {
 
-    const categories = [
-        { url: "Iluminacion", label: "Iluminación" },
-        { url: "Extintores", label: "Extintores" },
-        { url: "EPP", label: "EPP" }
-    ];
-
-    return (
-        <>
-            <nav className="navbar navbar-expand-lg fs-6">
-                <div className="container-fluid">
-                    <Link className="navbar-brand fw-light logo" to="/">
-                        <li className="nav-item">NES Consultora</li>
-                    </Link>
-                </div>
-                 <ul class="navbar-nav justify-content-center">
-                    {categories.map(({ url, label }) => (
-                    <Link className="nav-link active" key={url} to={`/category/${url}`}>
-                            <li className="nav-item">{label}</li>
-                    </Link>
-                    ))}
-                </ul>
-                <div>
+    return  (
+    <div className="navbar">
+        
+            <Link to={'/'}> <img className="logo" src={logo} alt="logo" /> </Link>
+        
+        
+            <ul>
+                {categorias.map(cat => <li className="navLink"  key={cat.id} > <NavLink className="navLinkItem"  to={`/category/${cat.id}`} activeClassName='active'>{cat.title} </NavLink></li>)}
+            </ul>
+        
+            <div>
                     <Link to="/Cart">
-                    <CardWidget />   
+                    <CartWidget />   
                     </Link>     
                 </div> 
-            </nav>
-        </>
+    </div>
     )
 }
-
-export default Navbar
+export default Navbar;

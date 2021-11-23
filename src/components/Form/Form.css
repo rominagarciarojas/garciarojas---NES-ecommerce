@@ -1,0 +1,32 @@
+.contenedorForm {
+    display: block;
+    text-align: center;
+    border-radius: 30px;
+    
+  }
+  
+  form {
+    display: grid;
+    background: rgba(128, 128, 128, 0.2);
+    width: 300px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-top:50px;
+    padding-top: 20px;
+    border-radius: 30px;
+  }
+  form input {
+    width: 250px;
+    padding: 5px;
+    margin: 10px 0px;
+    border-radius: 13px;
+    text-indent: 10px;
+  }
+  form button {
+    background: #89e0e0;
+    border: 4px #f29eb0;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #6f5041;
+  }
