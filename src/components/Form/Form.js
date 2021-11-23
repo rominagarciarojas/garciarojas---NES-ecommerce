@@ -72,17 +72,17 @@ const db = getFirestore()
         >
           <div >
             <div>
-              <p className="m-0 text-center">Nombre y Apellido</p>
+              <p className="textInput m-0 text-center">Nombre y Apellido</p>
               <input type="text" name="name" onChange={onChangeName} />
             </div>
 
             <div>
-              <p className="m-0 text-center">Teléfono</p>
+              <p className="textInput m-0 text-center">Celular</p>
               <input type="number" name="phone" onChange={onChangePhone} />
             </div>
 
             <div>
-              <p className="m-0 text-center">Email</p>
+              <p className="textInput m-0 text-center">Email</p>
               <input type="email" name="email" onChange={onChangeEmail} />
             </div>
 
