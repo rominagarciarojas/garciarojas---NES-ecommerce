@@ -1,5 +1,4 @@
 
-
 input {
   font-family: 'Orbitron', sans-serif;
 }
@@ -73,46 +72,3 @@ body{
   font-family: 'Orbitron', sans-serif;
 
 }
-
-
-
-
-
-
-
-
-
-
-/*
-.contenedorForm {
-    display: block;
-    text-align: center;
-    border-radius: 30px;
-    
-  }
-  
-  form {
-    display: grid;
-    background: rgba(128, 128, 128, 0.2);
-    width: 300px;
-    text-align: center;
-    justify-content: center;
-    margin: auto;
-    margin-top:50px;
-    padding-top: 20px;
-    border-radius: 30px;
-  }
-  form input {
-    width: 250px;
-    padding: 5px;
-    margin: 10px 0px;
-    border-radius: 13px;
-    text-indent: 10px;
-  }
-
-  .textInput{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: small;
-    
-  }
- */
