@@ -36,7 +36,7 @@ export function ItemCount ({ stock, initial, onAdd}) {
                     </span>
                     <span>{count}</span>
                     <span>
-                        <button className="mx-2" onClick={onIncrease}>+</button>
+                        <button className="mx-2" onClick={onIncrease}> + </button>
                     </span>
                 </div>
 

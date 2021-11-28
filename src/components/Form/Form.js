@@ -34,13 +34,7 @@ const Form = () => {
         alert("Gracias, nos comunicaremos contigo a la brevedad");
         limpiarCarrito();
       })
-      .catch((error) => {
-        alert(error.name);
-        alert(error.email);
-        alert(error.phone);
-        setLoader(false);
-      });
-
+      
     setName("");
     setEmail("");
     setPhone("");
@@ -83,8 +77,7 @@ const Form = () => {
            <input className="botonesdetalle m-2" type="button" value="Cancelar" onClick={() => limpiarCarrito()} />
       </Link>
       
-
-      <button className="botonesdetalle" type="submit" >Hacer el pedido</button>
+      <button className="botonesdetalle" type="submit" disabled={!(name && email && phone)}>Hacer el pedido</button>
       
     </form>
   );

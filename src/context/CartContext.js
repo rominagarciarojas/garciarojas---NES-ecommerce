@@ -19,11 +19,11 @@ export const CartProvider = ({children}) => {
     }
 
     const eliminarItem = (item) =>{
-        setCarrito(carrito.filter(servicio => servicio.id !== item))
+        setCarrito(carrito.filter(serv => serv.id !== item))
     }
 
     const totalCarrito = () => {
-        return carrito.reduce( (accion, servicio) => accion + (servicio.price * servicio.count), 0)
+        return carrito.reduce( (accion, serv) => accion + (serv.price * serv.count), 0)
     }
 
     const totalItem = (item) => {
@@ -31,7 +31,7 @@ export const CartProvider = ({children}) => {
     }
 
     const cantidadCarrito = () => {
-        return carrito.reduce( (accion, servicio) => accion + servicio.count, 0)
+        return carrito.reduce( (accion, serv) => accion + serv.count, 0)
     }
 
     const limpiarCarrito = () => {
