@@ -1,0 +1,32 @@
+.logoContenedorThanks{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #F4623A;
+}
+
+.logoThanks{
+   
+    padding-left: 5px;
+    margin: auto;
+    padding-bottom: 30px;
+  }
+
+  .contenedorThanks{
+    height: 66vh;
+    background-color: #F4623A;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    align-items: center;
+  }
+
+  .contenedorThanks h3{
+    color: whitesmoke;
+    padding-top: 150px;  
+  }
+
+  .contenedorThanks h6{
+    color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+  }

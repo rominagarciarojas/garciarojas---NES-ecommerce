@@ -1,51 +1,4 @@
 
-/*import React, {useState} from 'react';
-import './ItemCount.css';
-
-
-
-export const ItemCount = ({stock, initial, count, setCount}) => {
-    const [addDisabled, setAddDisabled] = useState(false);
-    const [removeDisabled, setRemoveDisabled] = useState(true);
-
-    const addItem = () => {
-        if (count < stock){
-            setCount(count + 1)
-            setRemoveDisabled(false)
-        } else{
-            setAddDisabled(true)
-        }
-    }
-
-    const removeItem = () => {
-        if (count > initial){
-            setAddDisabled(false)
-            setCount(count - 1)
-        } else{
-            setRemoveDisabled(true)
-        }
-    }
-    return (
-        
-        <>
-        <div>
-            <div>
-                
-                <button className="mx-2" disabled={removeDisabled} onClick={removeItem}> - </button><span>{count}</span><button className="mx-2" disabled={addDisabled} onClick={addItem}>+</button>
-                
-            </div>
-          
-        </div>
-    </>
-       
-      )
-  
-  }
-  
-
-export default ItemCount;
-*/
-
 import './ItemCount.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom' 
@@ -101,3 +54,4 @@ export function ItemCount ({ stock, initial, onAdd}) {
 }
 
 export default ItemCount;
+

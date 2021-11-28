@@ -4,6 +4,7 @@ import { collection, addDoc} from "firebase/firestore";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import "./Form.css";
+//import Thanks from "../Thanks/Thanks";
 
 const Form = () => {
 
@@ -14,6 +15,7 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [totalCompra, setTotalCompra] = useState("");
+  
 
   const [loader, setLoader] = useState(false);
 
@@ -29,9 +31,12 @@ const Form = () => {
       })
       .then(() => {
         setLoader(false);
-        alert("Tu pedido ha sido registrado");
+        alert("Gracias, nos comunicaremos contigo a la brevedad");
+        limpiarCarrito();
       })
       .catch((error) => {
+        alert(error.name);
+        alert(error.email);
         alert(error.phone);
         setLoader(false);
       });
@@ -77,39 +82,16 @@ const Form = () => {
       <Link to="/">
            <input className="botonesdetalle m-2" type="button" value="Cancelar" onClick={() => limpiarCarrito()} />
       </Link>
-      <button className="botonesdetalle m-2" type="submit">Hacer el pedido</button>
+      
+
+      <button className="botonesdetalle" type="submit" >Hacer el pedido</button>
+      
     </form>
   );
 };
 
+
 export default Form;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
