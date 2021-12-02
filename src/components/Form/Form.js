@@ -4,7 +4,8 @@ import { collection, addDoc} from "firebase/firestore";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import "./Form.css";
-//import Thanks from "../Thanks/Thanks";
+import Thanks from "../Thanks/Thanks";
+import { Modal } from "bootstrap";
 
 const Form = () => {
 
@@ -31,8 +32,8 @@ const Form = () => {
       })
       .then(() => {
         setLoader(false);
-        alert("Gracias, nos comunicaremos contigo a la brevedad");
-        limpiarCarrito();
+        alert("Gracias, nos comunicaremos con usted a la brevedad");
+        limpiarCarrito(loader);
       })
       
     setName("");
@@ -43,7 +44,7 @@ const Form = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <h2>Hacer el pedido</h2>
+      <h3 className="my-3">Hacer el pedido</h3>
 
       <label>Nombre y Apellido</label>
       <input
@@ -69,7 +70,7 @@ const Form = () => {
       <label>Total</label>
       <input
         placeholder="Total"
-        value={totalCarrito()}
+        value={totalCarrito(totalCompra)}
         onChange={(e) => setTotalCompra(e.target.value)}
       ></input>
 

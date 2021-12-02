@@ -15,7 +15,7 @@ const CartWidget = () => {
             (
                 <div className="cantidadCarrito">{cantidadCarrito()} </div> 
             ) : (
-                <div ></div> 
+                <div></div> 
             )}
             <div class="container-fluid">
             <botton><img src={cart4} className="App-cart" alt="cart" /></botton>

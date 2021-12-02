@@ -1,6 +1,6 @@
 
 import './ItemCount.css';
-import { useState } from 'react';
+import {  useState } from 'react';
 import { Link } from 'react-router-dom' 
 
 export function ItemCount ({ stock, initial, onAdd}) {                
@@ -9,7 +9,7 @@ export function ItemCount ({ stock, initial, onAdd}) {
     const [newBoton, setNewBoton] = useState (false)
 
     const onDecrease = () => {
-        if (count >= 1) {
+        if (count > 0) {
             setCount(count - 1)
         }
     }
@@ -22,8 +22,8 @@ export function ItemCount ({ stock, initial, onAdd}) {
     
     const handleOnAdd = () => {
         onAdd (count)
-        setCount (initial)
-        setNewBoton (true)
+       setCount (initial)
+       setNewBoton (true)
     }
 
    

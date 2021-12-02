@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 
 
-const ItemDetail = ({ title, description, stock, image, price, id }) => {
+const ItemDetail = ({ title, description, stock, image, price, id}) => {
 
     
     const [count, setCount] = useState(1)
@@ -15,7 +15,7 @@ const ItemDetail = ({ title, description, stock, image, price, id }) => {
     
     const {agregarItem} = useContext(CartContext);
 
-    const onAdd = () => {
+    const onAdd = (count) => {
 
         agregarItem({
             id,
@@ -38,7 +38,7 @@ const ItemDetail = ({ title, description, stock, image, price, id }) => {
             {!terminar ? (
                 <div>
                 
-                <ItemCount className="botonesdetalle" stock={stock} initial={1} onAdd={onAdd}/>
+                <ItemCount className="botonesdetalle" stock={stock} initial={0} onAdd={onAdd}/>
                
                 </div> 
 

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from 'react-router';
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { getFirestore } from "../../firebase/index";
-import { doc, getDoc   } from "@firebase/firestore";
+import { doc, getDoc } from "@firebase/firestore";
 import BounceLoader from "react-spinners/BounceLoader";
 import { css } from "@emotion/react";
 
