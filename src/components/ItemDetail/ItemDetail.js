@@ -36,23 +36,18 @@ const ItemDetail = ({ title, description, stock, image, price, id}) => {
             <h3>Precio: <b>${price} </b></h3>
             <p><i>{description}</i></p>
             {!terminar ? (
-                <div>
-                
+                <div>    
                 <ItemCount className="botonesdetalle" stock={stock} initial={0} onAdd={onAdd}/>
-               
-                </div> 
-
+                </div>
             ) : (
                 <div>
                     <Link to='/Cart' >
                         <button className="botonesdetalle m-3" onClick={terminarCompra}>Ir al carrito</button>
                     </Link>
                     <button className="botonesdetalle m-3" onClick={setCount}>Modificar</button>
-                </div>
-                
+                </div>   
             )
-    }
-            
+        }  
         </div>
     </div>
 ) }

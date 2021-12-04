@@ -1,23 +1,22 @@
 import React, {createContext, useState, useContext} from 'react';
+import swal from 'sweetalert';
 
 export const CartContext = createContext();
 export const useCartContext = () => useContext(CartContext);
+
 
 export const CartProvider = ({children}) => {
 
 
     const [carrito, setCarrito] = useState([]);
-    
-
     const itemExistente = (item) => 
         carrito.filter(serv => serv.id === item.id).length === 0;
-    
 
     const agregarItem = (item) => {
         if (itemExistente(item)){
             setCarrito([...carrito, item])
         } else{
-            alert('Ya tienes este servicio en tu carrito');
+            swal("Ya tienes este servicio en tu carrito");
         }
     }
 

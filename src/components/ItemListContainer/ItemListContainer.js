@@ -1,6 +1,5 @@
 import './ItemListContainer.css';
 import { useEffect, useState } from "react";
-//import ServicesCatalogue from "../../ServicesCatalogue.json";
 import { getFirestore } from "../../firebase/index.js";
 import { useParams } from 'react-router-dom';
 import {Item} from '../Item/Item';
@@ -49,8 +48,7 @@ export const ItemListContainer = () => {
                 :
                 <BounceLoader css={spinnerStyle} size={80} color={"#F4623A"} loading={loading} speedMultiplier={1}  />
                 }
-        </ul>   
-            
+        </ul>            
     </div>  
 )
 }

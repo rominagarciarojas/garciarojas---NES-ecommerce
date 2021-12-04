@@ -9,20 +9,16 @@ export const Navbar = () =>  {
 
     return  (
     <div className="navbar">
-        
             <Link to={'/'}> <img className="logo" src={logo} alt="logo" /> </Link>
-        
-        
             <ul>
                 {categorias.map(cat => <li className="navLink"  key={cat.id} > <NavLink className="navLinkItem"  to={`/category/${cat.id}`} activeClassName='active'>{cat.title} </NavLink></li>)}
             </ul>
-        
             <div>
                     <Link to="/Cart">
                     <CartWidget />   
                     </Link>     
                 </div> 
-    </div>
+        </div>
     )
 }
 export default Navbar;
