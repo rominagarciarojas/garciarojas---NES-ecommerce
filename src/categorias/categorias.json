@@ -2,7 +2,7 @@
     "categorias" : [
         {
             "id": "Iluminacion",
-            "title": "Medición de iluminacion"
+            "title": "Medición de iluminación"
         },
         {
             "id": "Extintores",
@@ -10,7 +10,7 @@
         },
         {   
             "id": "EPP",
-            "title": "Elementos de Proteccion Personal"
+            "title": "Elementos de Protección Personal"
         } 
     ]
 }
